@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>السجل الطبي للاعب</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0B1033}
+a{color:#FF8A4C}a:hover{color:#fff}
+*{scrollbar-width:thin;scrollbar-color:rgba(242,101,34,.45) transparent}
+::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(242,101,34,.45);border-radius:99px}::-webkit-scrollbar-thumb:hover{background:#F26522}
+::-webkit-scrollbar-button,::-webkit-scrollbar-corner{display:none}
+button{font-family:inherit;cursor:pointer}
+@keyframes kpulse{0%{r:7;opacity:.9}100%{r:26;opacity:0}}
+.kp{animation:kpulse 1.8s ease-out infinite}
+@keyframes krise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (max-width:900px){.kc{grid-column:1/-1 !important}}
+.kr{animation:krise .6s cubic-bezier(.2,.7,.2,1) both}
+</style>
+</helmet>
+<div dir="rtl" style="font-family: 'Readex Pro', sans-serif; color: #EEF0FA; background: #0B1033; min-height: 100vh; font-size: 14px; line-height: 1.7; font-weight: 300">
+
+<header style="padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid rgba(255,255,255,.07)">
+<div style="display: flex; align-items: center; gap: 14px">
+<img src="assets/logo.png" alt="شعار نادي الكرامة" style="width: 38px; height: 44px; object-fit: contain">
+<div style="width: 1px; height: 30px; background: rgba(255,255,255,.15)"></div>
+<div><div style="font-weight: 600; font-size: 17px; letter-spacing: .2px; line-height: 1.1">كرامة <span style="color: #F26522">كير</span></div><div style="font-size: 11px; color: #8E95C4">Sports Medicine &amp; Rehab</div></div>
+</div>
+<nav style="display: flex; gap: 4px; flex-wrap: wrap; font-size: 13px; background: rgba(255,255,255,.04); padding: 5px; border-radius: 14px; border: 1px solid rgba(255,255,255,.06)">
+<a href="#" style="color: #8E95C4; padding: 9px 16px; text-decoration: none; border-radius: 10px">لوحة القسم</a>
+<a href="#" style="color: #0B1033; padding: 9px 16px; text-decoration: none; background: #fff; border-radius: 10px; font-weight: 500">اللاعبون</a>
+<a href="#" style="color: #8E95C4; padding: 9px 16px; text-decoration: none; border-radius: 10px">المواعيد</a>
+<a href="#" style="color: #8E95C4; padding: 9px 16px; text-decoration: none; border-radius: 10px">التقارير</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 12px; color: #8E95C4"><span>رئيس قسم العلاج الطبيعي</span><div style="width: 36px; height: 36px; border-radius: 50%; background: #2B3A9B; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 500">ر</div></div>
+</header>
+
+<section style="position: relative; overflow: hidden; padding: 44px 40px 40px; border-bottom: 1px solid rgba(255,255,255,.07)">
+<div aria-hidden="true" style="position: absolute; top: 0; bottom: 0; left: 0; width: 46%; background: repeating-linear-gradient(180deg, rgba(242,101,34,.9) 0 22px, transparent 22px 38px); clip-path: polygon(34% 0, 100% 0, 100% 100%, 0 100%); opacity: .16"></div>
+<div aria-hidden="true" style="position: absolute; left: 40px; top: -40px; font-size: 380px; font-weight: 700; line-height: 1; color: transparent; -webkit-text-stroke: 2px rgba(255,255,255,.08); letter-spacing: -20px">10</div>
+
+<div style="position: relative; max-width: 1320px; margin: 0 auto">
+<div style="font-size: 12px; color: #8E95C4; display: flex; gap: 8px; align-items: center; flex-wrap: wrap">اللاعبون <span style="opacity: .4">/</span> كرة القدم <span style="opacity: .4">/</span> الرجال <span style="opacity: .4">/</span> <span style="color: #fff">السجل الطبي</span><span style="border: 1px solid rgba(255,138,76,.4); color: #FF8A4C; padding: 1px 10px; border-radius: 99px; margin-right: 6px; font-size: 11px">بيانات تجريبية</span></div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end; margin-top: 26px">
+<div style="flex: 999 1 520px; min-width: 0">
+<div style="display: flex; gap: 22px; align-items: center; flex-wrap: wrap">
+<div style="position: relative; width: 112px; height: 112px">
+<div style="width: 112px; height: 112px; border-radius: 30px; background: linear-gradient(160deg, #2B3A9B, #141C4F); display: flex; align-items: center; justify-content: center; font-size: 40px; font-weight: 600; color: #fff; box-shadow: 0 20px 50px -10px rgba(43,58,155,.8), inset 0 0 0 1px rgba(255,255,255,.12)">م.ع</div>
+<div style="position: absolute; bottom: -8px; left: -8px; background: #F26522; color: #fff; font-weight: 700; font-size: 18px; width: 42px; height: 42px; border-radius: 14px; display: flex; align-items: center; justify-content: center; border: 3px solid #0B1033">10</div>
+</div>
+<div>
+<div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(242,101,34,.14); color: #FF9A62; font-size: 12px; font-weight: 500; padding: 5px 14px 5px 12px; border-radius: 99px; border: 1px solid rgba(242,101,34,.35)"><span style="width: 7px; height: 7px; border-radius: 50%; background: #F26522; box-shadow: 0 0 0 4px rgba(242,101,34,.25)"></span>في التأهيل · المرحلة 3 من 5</div>
+<h1 style="margin: 10px 0 0; font-size: 54px; font-weight: 600; line-height: 1.05; letter-spacing: -1px; color: #fff">[اسم اللاعب]</h1>
+<div style="color: #A9AFD6; margin-top: 8px; font-size: 15px">لاعب وسط هجومي · فريق الرجال — كرة القدم · القدم اليمنى</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin-top: 34px; border: 1px solid rgba(255,255,255,.08); border-radius: 20px; background: rgba(255,255,255,.025); overflow: hidden">
+<div style="padding: 16px 20px; border-left: 1px solid rgba(255,255,255,.08)"><div style="font-size: 11px; color: #8E95C4">العمر</div><div style="font-size: 26px; font-weight: 500; color: #fff; line-height: 1.3">24<span style="font-size: 13px; color: #8E95C4; margin-right: 4px">سنة</span></div></div>
+<div style="padding: 16px 20px; border-left: 1px solid rgba(255,255,255,.08)"><div style="font-size: 11px; color: #8E95C4">الطول</div><div style="font-size: 26px; font-weight: 500; color: #fff; line-height: 1.3">178<span style="font-size: 13px; color: #8E95C4; margin-right: 4px">سم</span></div></div>
+<div style="padding: 16px 20px; border-left: 1px solid rgba(255,255,255,.08)"><div style="font-size: 11px; color: #8E95C4">الوزن</div><div style="font-size: 26px; font-weight: 500; color: #fff; line-height: 1.3">72<span style="font-size: 13px; color: #8E95C4; margin-right: 4px">كغ</span></div></div>
+<div style="padding: 16px 20px; border-left: 1px solid rgba(255,255,255,.08)"><div style="font-size: 11px; color: #8E95C4">فصيلة الدم</div><div style="font-size: 26px; font-weight: 500; color: #fff; line-height: 1.3">O+</div></div>
+<div style="padding: 16px 20px; background: rgba(229,72,77,.1)"><div style="font-size: 11px; color: #FF8A8E">حساسية دوائية</div><div style="font-size: 20px; font-weight: 500; color: #FFB3B5; line-height: 1.6">البنسلين</div></div>
+</div>
+</div>
+
+<div style="flex: 1 1 300px; display: flex; gap: 22px; align-items: center; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 24px; padding: 22px 24px">
+<svg width="132" height="132" viewBox="0 0 132 132" role="img" aria-label="الجاهزية 62 بالمئة">
+<circle cx="66" cy="66" r="54" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="10"></circle>
+<circle cx="66" cy="66" r="54" fill="none" stroke="#F26522" stroke-width="10" stroke-linecap="round" stroke-dasharray="{{ringDash}}" transform="rotate(-90 66 66)"></circle>
+<text x="66" y="68" text-anchor="middle" fill="#fff" font-size="32" font-weight="600" font-family="Readex Pro">62%</text>
+<text x="66" y="90" text-anchor="middle" fill="#8E95C4" font-size="11" font-family="Readex Pro">الجاهزية</text>
+</svg>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div><div style="font-size: 11px; color: #8E95C4">العودة المتوقعة</div><div style="font-size: 20px; font-weight: 500; color: #fff">28 تشرين الثاني</div></div>
+<div><div style="font-size: 11px; color: #8E95C4">أيام الغياب</div><div style="font-size: 20px; font-weight: 500; color: #fff">18 <span style="font-size: 12px; color: #8E95C4">من 37 متوقعة</span></div></div>
+<div style="display: flex; gap: 8px; margin-top: 4px">
+<button style="background: #F26522; color: #fff; border: 0; border-radius: 12px; padding: 10px 16px; font-weight: 500; min-height: 44px; white-space: nowrap; box-shadow: 0 10px 24px -8px rgba(242,101,34,.8)">+ جلسة</button>
+<button style="background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.2); border-radius: 12px; padding: 10px 16px; min-height: 44px">تقرير</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div style="position: sticky; top: 0; z-index: 5; background: rgba(11,16,51,.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,.07)">
+<div role="tablist" style="max-width: 1320px; margin: 0 auto; padding: 0 40px; display: flex; gap: 6px; overflow-x: auto">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="5">
+<button role="tab" onClick="{{t.pick}}" style="{{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+</div>
+
+<main style="background: #F4F1EC; color: #161A3A; padding: 36px 40px 64px; min-height: 600px">
+<div style="max-width: 1320px; margin: 0 auto">
+
+<sc-if value="{{isOverview}}" hint-placeholder-val="{{true}}">
+<div class="kr" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 20px">
+
+<section class="kc" style="grid-column: span 7; background: #fff; border-radius: 28px; padding: 28px 30px; box-shadow: 0 1px 0 rgba(20,28,79,.04), 0 30px 60px -40px rgba(20,28,79,.35); display: flex; gap: 26px; flex-wrap: wrap">
+<div style="flex: 999 1 300px; min-width: 0">
+<div style="font-size: 12px; color: #F26522; font-weight: 500; letter-spacing: .3px">الإصابة الحالية · منذ 22 تشرين الأول</div>
+<h2 style="margin: 6px 0 0; font-size: 30px; font-weight: 600; letter-spacing: -.5px; line-height: 1.25; color: #0B1033">تمزّق في عضلة خلفية الفخذ اليمنى</h2>
+<div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px">
+<span style="background: #0B1033; color: #fff; padding: 5px 14px; border-radius: 99px; font-size: 12px">الدرجة 2</span>
+<span style="background: #F4F1EC; padding: 5px 14px; border-radius: 99px; font-size: 12px">مباراة · الدقيقة 67</span>
+<span style="background: #F4F1EC; padding: 5px 14px; border-radius: 99px; font-size: 12px">دون احتكاك</span>
+<span style="background: #FFE9DC; color: #A63F0C; padding: 5px 14px; border-radius: 99px; font-size: 12px; font-weight: 500">متكرّرة — مرتبطة بإصابة 2025</span>
+</div>
+<div style="margin-top: 28px; font-size: 12px; color: #6A6F8C">مسار العودة إلى اللعب</div>
+<div style="display: flex; flex-direction: column; gap: 0; margin-top: 10px">
+<sc-for list="{{stages}}" as="s" hint-placeholder-count="5">
+<div style="display: flex; gap: 14px; align-items: stretch">
+<div style="display: flex; flex-direction: column; align-items: center; width: 26px">
+<div style="{{s.dot}}">{{s.mark}}</div>
+<div style="{{s.line}}"></div>
+</div>
+<div style="padding-bottom: 14px; flex: 1"><div style="{{s.title}}">{{s.label}}</div><div style="font-size: 12px; color: #6A6F8C">{{s.note}}</div></div>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="flex: 1 1 200px; background: #0B1033; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; align-items: center; position: relative; overflow: hidden">
+<div style="font-size: 11px; color: #8E95C4; align-self: flex-start">موقع الإصابة · منظر خلفي</div>
+<svg viewBox="0 0 200 400" width="180" height="360" role="img" aria-label="مخطط الجسم مع موضع الإصابة في خلف الفخذ الأيمن">
+<g fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.22)" stroke-width="1.2">
+<circle cx="100" cy="36" r="22"></circle>
+<path d="M78 62 Q100 70 122 62 L150 78 Q160 84 162 100 L170 180 Q171 190 164 192 Q157 193 155 184 L144 110 L140 170 Q142 196 138 206 L62 206 Q58 196 60 170 L56 110 L45 184 Q43 193 36 192 Q29 190 30 180 L38 100 Q40 84 50 78 Z"></path>
+<path d="M62 206 L98 206 L96 300 Q95 330 92 380 Q91 390 80 390 L72 390 Q68 388 70 378 L66 300 Q60 250 62 206 Z"></path>
+<path d="M102 206 L138 206 Q140 250 134 300 L130 378 Q132 388 128 390 L120 390 Q109 390 108 380 Q105 330 104 300 Z"></path>
+</g>
+<circle cx="80" cy="250" r="7" fill="#F26522" class="kp"></circle>
+<circle cx="80" cy="250" r="7" fill="#F26522"></circle>
+<circle cx="80" cy="250" r="16" fill="none" stroke="#F26522" stroke-width="1.5" stroke-dasharray="3 3"></circle>
+</svg>
+<div style="position: absolute; bottom: 70px; right: 14px; background: #F26522; color: #fff; font-size: 11px; padding: 4px 10px; border-radius: 8px">خلف الفخذ · يمين</div>
+</div>
+</section>
+
+<section class="kc" style="grid-column: span 5; background: #F26522; color: #fff; border-radius: 28px; padding: 28px 30px; position: relative; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(242,101,34,.7)">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: repeating-linear-gradient(180deg, rgba(255,255,255,.09) 0 14px, transparent 14px 26px); clip-path: polygon(55% 0, 100% 0, 100% 100%, 25% 100%)"></div>
+<div style="position: relative">
+<div style="font-size: 12px; opacity: .85">الموعد القادم</div>
+<div style="font-size: 64px; font-weight: 600; line-height: 1; letter-spacing: -2px; margin-top: 10px">10:30</div>
+<div style="font-size: 18px; font-weight: 500; margin-top: 6px">الثلاثاء · 10 تشرين الثاني</div>
+<div style="height: 1px; background: rgba(255,255,255,.3); margin: 20px 0"></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; font-size: 13px">
+<div><div style="opacity: .75; font-size: 11px">النوع</div>جلسة تأهيل وتقوية</div>
+<div><div style="opacity: .75; font-size: 11px">المكان</div>غرفة العلاج 2</div>
+<div><div style="opacity: .75; font-size: 11px">المعالج</div>[اسم المعالج]</div>
+<div><div style="opacity: .75; font-size: 11px">تدريب الفريق</div>17:00 · لا تعارض</div>
+</div>
+<div style="display: flex; gap: 8px; margin-top: 22px">
+<button style="background: #0B1033; color: #fff; border: 0; border-radius: 12px; padding: 10px 18px; min-height: 44px; font-weight: 500">تأكيد الحضور</button>
+<button style="background: rgba(255,255,255,.18); color: #fff; border: 0; border-radius: 12px; padding: 10px 18px; min-height: 44px">إعادة جدولة</button>
+</div>
+</div>
+</section>
+
+<section class="kc" style="grid-column: span 8; background: #fff; border-radius: 28px; padding: 28px 30px; box-shadow: 0 30px 60px -40px rgba(20,28,79,.35)">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px">
+<div><h2 style="margin: 0; font-size: 22px; font-weight: 600; color: #0B1033">منحنى التعافي</h2><div style="font-size: 12px; color: #6A6F8C">آخر 8 جلسات علاجية</div></div>
+<div style="display: flex; gap: 28px">
+<div><div style="font-size: 11px; color: #6A6F8C; display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 3px; background: #2B3A9B; border-radius: 2px"></span>تماثل القوة</div><div style="font-size: 30px; font-weight: 600; color: #2B3A9B; line-height: 1.2">84%</div></div>
+<div><div style="font-size: 11px; color: #6A6F8C; display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 3px; background: #F26522; border-radius: 2px"></span>الألم</div><div style="font-size: 30px; font-weight: 600; color: #D9530F; line-height: 1.2">2<span style="font-size: 14px; color: #6A6F8C">/10</span></div></div>
+</div>
+</div>
+<svg viewBox="0 0 720 230" width="100%" height="230" role="img" aria-label="منحنى ارتفاع القوة من 45 إلى 84 بالمئة وانخفاض الألم من 7 إلى 2" style="margin-top: 14px; overflow: visible">
+<defs><linearGradient id="kg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3A9B" stop-opacity=".22"></stop><stop offset="1" stop-color="#2B3A9B" stop-opacity="0"></stop></linearGradient></defs>
+<g stroke="#ECE7E0" stroke-width="1"><line x1="0" y1="20" x2="720" y2="20"></line><line x1="0" y1="70" x2="720" y2="70"></line><line x1="0" y1="120" x2="720" y2="120"></line><line x1="0" y1="170" x2="720" y2="170"></line><line x1="0" y1="200" x2="720" y2="200"></line></g>
+<line x1="0" y1="38" x2="720" y2="38" stroke="#2B3A9B" stroke-width="1" stroke-dasharray="5 5" opacity=".5"></line>
+<text x="716" y="32" text-anchor="end" font-size="11" fill="#2B3A9B" font-family="Readex Pro">هدف العودة 90%</text>
+<path d="{{strArea}}" fill="url(#kg)"></path>
+<polyline points="{{strPts}}" fill="none" stroke="#2B3A9B" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"></polyline>
+<polyline points="{{painPts}}" fill="none" stroke="#F26522" stroke-width="3" stroke-dasharray="1 0" stroke-linejoin="round" stroke-linecap="round"></polyline>
+<circle cx="{{lastX}}" cy="{{lastStrY}}" r="7" fill="#fff" stroke="#2B3A9B" stroke-width="3.5"></circle>
+<circle cx="{{lastX}}" cy="{{lastPainY}}" r="6" fill="#fff" stroke="#F26522" stroke-width="3"></circle>
+</svg>
+<div style="display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); font-size: 11px; color: #6A6F8C; text-align: center; margin-top: 6px" dir="ltr">
+<sc-for list="{{labels}}" as="l" hint-placeholder-count="8"><div>{{l}}</div></sc-for>
+</div>
+</section>
+
+<div class="kc" style="grid-column: span 4; display: flex; flex-direction: column; gap: 20px">
+<section style="background: #0B1033; color: #fff; border-radius: 28px; padding: 24px 26px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h3 style="margin: 0; font-size: 16px; font-weight: 500">ما يراه المدرب</h3><span style="font-size: 11px; color: #8E95C4">بلا تفاصيل طبية</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px; font-size: 13px">
+<div style="display: flex; justify-content: space-between; padding: 10px 14px; background: rgba(56,180,110,.14); border-radius: 12px"><span>تدريب منفرد</span><span style="color: #7FE0A8">مسموح</span></div>
+<div style="display: flex; justify-content: space-between; padding: 10px 14px; background: rgba(56,180,110,.14); border-radius: 12px"><span>جري خفيف</span><span style="color: #7FE0A8">مسموح</span></div>
+<div style="display: flex; justify-content: space-between; padding: 10px 14px; background: rgba(229,72,77,.16); border-radius: 12px"><span>سرعات قصوى · احتكاك</span><span style="color: #FF9A9D">ممنوع</span></div>
+</div>
+</section>
+<section style="background: #fff; border-radius: 28px; padding: 24px 26px; box-shadow: 0 30px 60px -40px rgba(20,28,79,.35)">
+<div style="display: flex; justify-content: space-between; align-items: baseline"><h3 style="margin: 0; font-size: 16px; font-weight: 500; color: #0B1033">التمارين المنزلية</h3><span style="font-size: 24px; font-weight: 600; color: #0B1033">5<span style="font-size: 13px; color: #6A6F8C">/7</span></span></div>
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; margin-top: 14px">
+<sc-for list="{{week}}" as="w" hint-placeholder-count="7">
+<div style="text-align: center"><div style="{{w.box}}">{{w.mark}}</div><div style="font-size: 10px; color: #6A6F8C; margin-top: 4px">{{w.d}}</div></div>
+</sc-for>
+</div>
+</section>
+</div>
+
+</div>
+</sc-if>
+
+<sc-if value="{{isInjuries}}" hint-placeholder-val="{{false}}">
+<section class="kr" style="background: #fff; border-radius: 28px; padding: 30px; box-shadow: 0 30px 60px -40px rgba(20,28,79,.35)">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 22px">
+<div><h2 style="margin: 0; font-size: 26px; font-weight: 600; color: #0B1033">سجل الإصابات</h2><div style="font-size: 12px; color: #6A6F8C">منذ الانتساب إلى النادي — فئة الأشبال 2012</div></div>
+<div style="display: flex; gap: 30px"><div><div style="font-size: 11px; color: #6A6F8C">إجمالي الإصابات</div><div style="font-size: 30px; font-weight: 600; color: #0B1033">4</div></div><div><div style="font-size: 11px; color: #6A6F8C">أيام الغياب</div><div style="font-size: 30px; font-weight: 600; color: #0B1033">113</div></div></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{injuries}}" as="r" hint-placeholder-count="4">
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; padding: 18px 22px; border-radius: 20px; background: #F8F6F2">
+<div style="{{r.bar}}"></div>
+<div style="min-width: 130px; font-size: 12px; color: #6A6F8C">{{r.date}}</div>
+<div style="flex: 1 1 240px"><div style="font-weight: 500; font-size: 16px; color: #0B1033">{{r.name}}</div><div style="font-size: 12px; color: #6A6F8C">{{r.grade}} · {{r.ctx}}</div></div>
+<div style="text-align: center; min-width: 80px"><div style="font-size: 22px; font-weight: 600; color: #0B1033; line-height: 1.1">{{r.days}}</div><div style="font-size: 11px; color: #6A6F8C">يوم غياب</div></div>
+<span style="{{r.chip}}">{{r.status}}</span>
+</div>
+</sc-for>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{isSessions}}" hint-placeholder-val="{{false}}">
+<section class="kr" style="background: #fff; border-radius: 28px; padding: 30px; box-shadow: 0 30px 60px -40px rgba(20,28,79,.35)">
+<h2 style="margin: 0 0 22px; font-size: 26px; font-weight: 600; color: #0B1033">الجلسات العلاجية</h2>
+<div style="display: flex; flex-direction: column; gap: 0">
+<sc-for list="{{sessions}}" as="s" hint-placeholder-count="4">
+<div style="display: flex; gap: 20px; flex-wrap: wrap; padding: 20px 0; border-bottom: 1px solid #EFEBE5; align-items: flex-start">
+<div style="width: 64px; height: 64px; border-radius: 18px; background: #0B1033; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.1"><span style="font-size: 22px; font-weight: 600">{{s.day}}</span><span style="font-size: 10px; color: #8E95C4">{{s.mon}}</span></div>
+<div style="flex: 1 1 320px"><div style="font-weight: 500; font-size: 16px; color: #0B1033">{{s.title}}</div><div style="color: #4A4F6E; font-size: 13px; margin-top: 2px">{{s.work}}</div><div style="font-size: 12px; color: #6A6F8C; margin-top: 6px">{{s.by}}</div></div>
+<div style="text-align: center; min-width: 70px"><div style="font-size: 11px; color: #6A6F8C">الألم</div><div style="font-size: 24px; font-weight: 600; color: #D9530F">{{s.pain}}</div></div>
+</div>
+</sc-for>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{isHistory}}" hint-placeholder-val="{{false}}">
+<div class="kr" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<section style="background: #fff; border-radius: 28px; padding: 26px; box-shadow: 0 30px 60px -40px rgba(20,28,79,.35)"><div style="font-size: 12px; color: #F26522">01</div><h3 style="margin: 4px 0 14px; font-size: 18px; font-weight: 600; color: #0B1033">التاريخ المرضي</h3><div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px"><div>الأمراض المزمنة<div style="font-weight: 500">لا يوجد</div></div><div>العمليات السابقة<div style="font-weight: 500">تنظير غضروف الركبة اليسرى · 2022</div></div><div>الأدوية الحالية<div style="font-weight: 500">لا يوجد</div></div></div></section>
+<section style="background: #fff; border-radius: 28px; padding: 26px; box-shadow: 0 30px 60px -40px rgba(20,28,79,.35)"><div style="font-size: 12px; color: #F26522">02</div><h3 style="margin: 4px 0 14px; font-size: 18px; font-weight: 600; color: #0B1033">الفحص قبل الموسم</h3><div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px"><div style="display: flex; justify-content: space-between"><span>تخطيط القلب</span><span style="color: #1E7A47; font-weight: 500">سليم</span></div><div style="display: flex; justify-content: space-between"><span>التحاليل الدموية</span><span style="color: #1E7A47; font-weight: 500">سليمة</span></div><div style="display: flex; justify-content: space-between"><span>اختبار الحركة الوظيفية</span><span style="color: #D9530F; font-weight: 500">مستحق</span></div></div></section>
+<section style="background: #0B1033; color: #fff; border-radius: 28px; padding: 26px"><div style="font-size: 12px; color: #FF8A4C">03</div><h3 style="margin: 4px 0 14px; font-size: 18px; font-weight: 600">الطوارئ</h3><div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px"><div><span style="color: #8E95C4">هاتف اللاعب</span><div>[الرقم]</div></div><div><span style="color: #8E95C4">جهة اتصال للطوارئ</span><div>[الاسم والرقم]</div></div><div style="color: #FFB3B5">حساسية: البنسلين</div></div></section>
+</div>
+</sc-if>
+
+<sc-if value="{{isFiles}}" hint-placeholder-val="{{false}}">
+<section class="kr" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<sc-for list="{{files}}" as="f" hint-placeholder-count="3">
+<div style="background: #fff; border-radius: 28px; overflow: hidden; box-shadow: 0 30px 60px -40px rgba(20,28,79,.35)">
+<div style="height: 150px; background: #0B1033; display: flex; align-items: center; justify-content: center; position: relative"><div style="position: absolute; inset: 0; background: repeating-linear-gradient(180deg, rgba(242,101,34,.18) 0 10px, transparent 10px 20px); clip-path: polygon(60% 0, 100% 0, 100% 100%, 30% 100%)"></div><span style="position: relative; color: #fff; font-size: 13px; border: 1px solid rgba(255,255,255,.25); padding: 6px 14px; border-radius: 99px">{{f.kind}}</span></div>
+<div style="padding: 18px 20px"><div style="font-weight: 500; color: #0B1033">{{f.name}}</div><div style="font-size: 12px; color: #6A6F8C">{{f.date}}</div></div>
+</div>
+</sc-for>
+</section>
+</sc-if>
+
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+  constructor(p){ super(p); this.state = { tab: 'overview' }; }
+  renderVals() {
+    const tab = this.state.tab;
+    const defs = [['overview','نظرة عامة'],['injuries','سجل الإصابات'],['sessions','الجلسات'],['history','التاريخ الطبي'],['files','الصور والتقارير']];
+    const tabs = defs.map(([id,label]) => ({ label, pick: () => this.setState({ tab: id }),
+      style: 'background:none;border:0;padding:16px 18px;font-size:14px;white-space:nowrap;min-height:52px;' + (tab===id ? 'color:#fff;font-weight:500;box-shadow:inset 0 -3px 0 #F26522' : 'color:#8E95C4') }));
+    const S = [['الحماية والراحة','أُنجزت · 4 أيام'],['استعادة الحركة دون ألم','أُنجزت · 6 أيام'],['التقوية التدريجية','الحالية · 84% من الهدف'],['الجري وتغيير الاتجاه','تبدأ عند تماثل 90%'],['العودة للتدريب الكامل','بعد اعتماد الطبيب']];
+    const stages = S.map(([label,note],i) => {
+      const done = i<2, cur = i===2;
+      return { label, note, mark: done ? '✓' : String(i+1),
+        dot: 'width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0;' + (done ? 'background:#0B1033;color:#fff' : cur ? 'background:#F26522;color:#fff;box-shadow:0 0 0 5px rgba(242,101,34,.2)' : 'background:#F4F1EC;color:#6A6F8C'),
+        line: 'flex:1;width:2px;min-height:14px;' + (i===4 ? 'background:transparent' : done ? 'background:#0B1033' : 'background:#E6E0D8'),
+        title: 'font-size:14px;line-height:26px;' + (cur ? 'font-weight:600;color:#D9530F' : done ? 'font-weight:500;color:#0B1033' : 'color:#6A6F8C') };
+    });
+    const pain=[7,6,5,5,4,3,3,2], str=[45,52,58,63,70,75,80,84];
+    const X = i => 20 + i*97, Ys = v => 200 - (v/100)*180, Yp = v => 200 - (v/10)*180;
+    const strPts = str.map((v,i)=>X(i)+','+Ys(v)).join(' ');
+    const painPts = pain.map((v,i)=>X(i)+','+Yp(v)).join(' ');
+    const strArea = 'M' + X(0) + ',200 L' + str.map((v,i)=>X(i)+','+Ys(v)).join(' L') + ' L' + X(7) + ',200 Z';
+    const labels = ['24/10','26/10','28/10','30/10','1/11','4/11','6/11','8/11'];
+    const C = 2*Math.PI*54;
+    const days = ['سبت','أحد','اثنين','ثلاثاء','أربعاء','خميس','جمعة'], ok=[1,1,0,1,1,1,0];
+    const week = days.map((d,i)=>({ d, mark: ok[i] ? '✓' : '', box: 'height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:14px;' + (ok[i] ? 'background:#F26522;color:#fff' : 'background:#F4F1EC;color:#6A6F8C;border:1px dashed #D9D2C8') }));
+    const chip = (c,bg) => 'padding:6px 14px;border-radius:99px;font-size:12px;font-weight:500;color:' + c + ';background:' + bg;
+    const bar = c => 'width:4px;align-self:stretch;border-radius:4px;background:' + c;
+    const injuries = [
+      { date:'22 تشرين الأول 2026', name:'تمزّق خلفية الفخذ اليمنى', grade:'الدرجة 2', ctx:'مباراة · دون احتكاك', days:'18', status:'في التأهيل', chip: chip('#A63F0C','#FFE4D3'), bar: bar('#F26522') },
+      { date:'آذار 2025', name:'شدّ خلفية الفخذ اليمنى', grade:'الدرجة 1', ctx:'تدريب', days:'12', status:'تعافى', chip: chip('#1E7A47','#E1F3E8'), bar: bar('#2B3A9B') },
+      { date:'أيلول 2023', name:'التواء الكاحل الأيسر', grade:'الدرجة 1', ctx:'مباراة · احتكاك', days:'9', status:'تعافى', chip: chip('#1E7A47','#E1F3E8'), bar: bar('#2B3A9B') },
+      { date:'2022', name:'إصابة غضروف الركبة اليسرى', grade:'جراحة بالمنظار', ctx:'تدريب', days:'74', status:'تعافى', chip: chip('#1E7A47','#E1F3E8'), bar: bar('#2B3A9B') }];
+    const sessions = [
+      { day:'8', mon:'تشرين 2', title:'تقوية لا مركزية + جري خفيف', work:'تمارين نورديك · جري 10 دقائق بسرعة 50% · إطالات ديناميكية', pain:'2', by:'المعالج [الاسم] · 45 دقيقة' },
+      { day:'6', mon:'تشرين 2', title:'علاج يدوي وتقوية', work:'تحرير عضلي يدوي · تقوية بالأوزان · دراجة ثابتة 15 دقيقة', pain:'3', by:'المعالج [الاسم] · 50 دقيقة' },
+      { day:'4', mon:'تشرين 2', title:'أجهزة وتحكّم حركي', work:'أمواج فوق صوتية · جسور ورفع ورك · تمارين توازن', pain:'3', by:'المعالج [الاسم] · 40 دقيقة' },
+      { day:'1', mon:'تشرين 2', title:'إعادة تقييم وانتقال للمرحلة 3', work:'قياس مدى الحركة والقوة · تحديث خطة العلاج', pain:'4', by:'رئيس القسم · 30 دقيقة' }];
+    const files = [ { kind:'رنين مغناطيسي', name:'الفخذ الأيمن — صور وتقرير', date:'23 تشرين الأول 2026' }, { kind:'تقرير طبي', name:'تشخيص طبيب النادي', date:'23 تشرين الأول 2026' }, { kind:'فيديو', name:'اختبار الجري — المرحلة 3', date:'8 تشرين الثاني 2026' } ];
+    return { tabs, stages, strPts, painPts, strArea, labels, lastX: X(7), lastStrY: Ys(84), lastPainY: Yp(2),
+      ringDash: (C*0.62).toFixed(1) + ' ' + C.toFixed(1), week, injuries, sessions, files,
+      isOverview: tab==='overview', isInjuries: tab==='injuries', isSessions: tab==='sessions', isHistory: tab==='history', isFiles: tab==='files' };
+  }
+}
+</script>
+</body>
+</html>
