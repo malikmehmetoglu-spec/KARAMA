@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B1033">
 <title>السجل الطبي للاعب</title>
 <script src="./support.js"></script>
 </head>
@@ -21,30 +23,68 @@ button{font-family:inherit;cursor:pointer}
 @keyframes kpulse{0%{r:7;opacity:.9}100%{r:26;opacity:0}}
 .kp{animation:kpulse 1.8s ease-out infinite}
 @keyframes krise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+html{-webkit-text-size-adjust:100%}
+[role=tablist]{scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+[role=tablist]::-webkit-scrollbar{display:none}
+[role=tab]{scroll-snap-align:start;transition:color .2s,box-shadow .2s}
+button,a{-webkit-tap-highlight-color:transparent;transition:transform .15s}
+button:active,a:active{transform:scale(.97)}
+@media (max-width:1024px){
+.m-g3{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.m-stats{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.m-stats>div{border-bottom:1px solid rgba(255,255,255,.08)}
+}
+@media (max-width:720px){
+.m-hdr{padding:12px 16px!important}
+.m-nav,.m-user{display:none!important}
+.m-hero{padding:22px 16px 22px!important}
+.m-wm{font-size:200px!important;top:20px!important;left:-10px!important}
+.m-av{width:76px!important;height:76px!important}.m-av>div:first-child{width:76px!important;height:76px!important;border-radius:22px!important;font-size:26px!important}.m-av>div:last-child{width:32px!important;height:32px!important;font-size:14px!important;border-radius:10px!important}
+.m-str{width:70%!important;opacity:.09!important}
+.m-h1{font-size:34px!important;letter-spacing:-.5px!important}
+.m-stats{grid-template-columns:repeat(2,minmax(0,1fr))!important;margin-top:22px!important;border-radius:16px!important}
+.m-stats>div{padding:12px 14px!important;border-left:0!important}
+.m-stats>div:nth-child(odd){border-left:1px solid rgba(255,255,255,.08)!important}
+.m-stats>div:last-child{grid-column:1/-1}
+.m-ring{padding:16px!important;gap:14px!important;border-radius:20px!important}
+.m-ring svg{width:108px;height:108px}
+.m-tabs{padding:0 8px!important}
+.m-tabs [role=tab]{padding:14px 12px!important;font-size:13px!important}
+.m-main{padding:18px 12px 110px!important}
+.m-g12{gap:14px!important}
+.m-g3{grid-template-columns:1fr!important;gap:14px!important}
+.kc,.m-g3>*,.m-g12 section{border-radius:22px!important}
+.m-card,.kc{padding:20px 18px!important}
+.m-h2{font-size:23px!important}
+.m-body{flex-basis:100%!important}
+.m-body svg{height:300px}
+.m-time{font-size:52px!important}
+.m-bnav{display:flex!important;position:fixed;bottom:0;left:0;right:0;z-index:20;background:rgba(11,16,51,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid rgba(255,255,255,.08);padding:4px 6px calc(6px + env(safe-area-inset-bottom));align-items:flex-end}
+}
 @media (max-width:900px){.kc{grid-column:1/-1 !important}}
 .kr{animation:krise .6s cubic-bezier(.2,.7,.2,1) both}
 </style>
 </helmet>
 <div dir="rtl" style="font-family: 'Readex Pro', sans-serif; color: #EEF0FA; background: #0B1033; min-height: 100vh; font-size: 14px; line-height: 1.7; font-weight: 300">
 
-<header style="padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid rgba(255,255,255,.07)">
+<header class="m-hdr" style="padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid rgba(255,255,255,.07)">
 <div style="display: flex; align-items: center; gap: 14px">
 <img src="assets/logo.png" alt="شعار نادي الكرامة" style="width: 38px; height: 44px; object-fit: contain">
 <div style="width: 1px; height: 30px; background: rgba(255,255,255,.15)"></div>
 <div><div style="font-weight: 600; font-size: 17px; letter-spacing: .2px; line-height: 1.1">كرامة <span style="color: #F26522">كير</span></div><div style="font-size: 11px; color: #8E95C4">Sports Medicine &amp; Rehab</div></div>
 </div>
-<nav style="display: flex; gap: 4px; flex-wrap: wrap; font-size: 13px; background: rgba(255,255,255,.04); padding: 5px; border-radius: 14px; border: 1px solid rgba(255,255,255,.06)">
+<nav class="m-nav" style="display: flex; gap: 4px; flex-wrap: wrap; font-size: 13px; background: rgba(255,255,255,.04); padding: 5px; border-radius: 14px; border: 1px solid rgba(255,255,255,.06)">
 <a href="#" style="color: #8E95C4; padding: 9px 16px; text-decoration: none; border-radius: 10px">لوحة القسم</a>
 <a href="#" style="color: #0B1033; padding: 9px 16px; text-decoration: none; background: #fff; border-radius: 10px; font-weight: 500">اللاعبون</a>
 <a href="#" style="color: #8E95C4; padding: 9px 16px; text-decoration: none; border-radius: 10px">المواعيد</a>
 <a href="#" style="color: #8E95C4; padding: 9px 16px; text-decoration: none; border-radius: 10px">التقارير</a>
 </nav>
-<div style="display: flex; align-items: center; gap: 10px; font-size: 12px; color: #8E95C4"><span>رئيس قسم العلاج الطبيعي</span><div style="width: 36px; height: 36px; border-radius: 50%; background: #2B3A9B; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 500">ر</div></div>
+<div class="m-user" style="display: flex; align-items: center; gap: 10px; font-size: 12px; color: #8E95C4"><span>رئيس قسم العلاج الطبيعي</span><div style="width: 36px; height: 36px; border-radius: 50%; background: #2B3A9B; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 500">ر</div></div>
 </header>
 
-<section style="position: relative; overflow: hidden; padding: 44px 40px 40px; border-bottom: 1px solid rgba(255,255,255,.07)">
-<div aria-hidden="true" style="position: absolute; top: 0; bottom: 0; left: 0; width: 46%; background: repeating-linear-gradient(180deg, rgba(242,101,34,.9) 0 22px, transparent 22px 38px); clip-path: polygon(34% 0, 100% 0, 100% 100%, 0 100%); opacity: .16"></div>
-<div aria-hidden="true" style="position: absolute; left: 40px; top: -40px; font-size: 380px; font-weight: 700; line-height: 1; color: transparent; -webkit-text-stroke: 2px rgba(255,255,255,.08); letter-spacing: -20px">10</div>
+<section class="m-hero" style="position: relative; overflow: hidden; padding: 44px 40px 40px; border-bottom: 1px solid rgba(255,255,255,.07)">
+<div class="m-str" aria-hidden="true" style="position: absolute; top: 0; bottom: 0; left: 0; width: 46%; background: repeating-linear-gradient(180deg, rgba(242,101,34,.9) 0 22px, transparent 22px 38px); clip-path: polygon(34% 0, 100% 0, 100% 100%, 0 100%); opacity: .16"></div>
+<div aria-hidden="true" class="m-wm" style="position: absolute; left: 40px; top: -40px; font-size: 380px; font-weight: 700; line-height: 1; color: transparent; -webkit-text-stroke: 2px rgba(255,255,255,.08); letter-spacing: -20px">10</div>
 
 <div style="position: relative; max-width: 1320px; margin: 0 auto">
 <div style="font-size: 12px; color: #8E95C4; display: flex; gap: 8px; align-items: center; flex-wrap: wrap">اللاعبون <span style="opacity: .4">/</span> كرة القدم <span style="opacity: .4">/</span> الرجال <span style="opacity: .4">/</span> <span style="color: #fff">السجل الطبي</span><span style="border: 1px solid rgba(255,138,76,.4); color: #FF8A4C; padding: 1px 10px; border-radius: 99px; margin-right: 6px; font-size: 11px">بيانات تجريبية</span></div>
@@ -52,18 +92,18 @@ button{font-family:inherit;cursor:pointer}
 <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end; margin-top: 26px">
 <div style="flex: 999 1 520px; min-width: 0">
 <div style="display: flex; gap: 22px; align-items: center; flex-wrap: wrap">
-<div style="position: relative; width: 112px; height: 112px">
+<div class="m-av" style="position: relative; width: 112px; height: 112px">
 <div style="width: 112px; height: 112px; border-radius: 30px; background: linear-gradient(160deg, #2B3A9B, #141C4F); display: flex; align-items: center; justify-content: center; font-size: 40px; font-weight: 600; color: #fff; box-shadow: 0 20px 50px -10px rgba(43,58,155,.8), inset 0 0 0 1px rgba(255,255,255,.12)">م.ع</div>
 <div style="position: absolute; bottom: -8px; left: -8px; background: #F26522; color: #fff; font-weight: 700; font-size: 18px; width: 42px; height: 42px; border-radius: 14px; display: flex; align-items: center; justify-content: center; border: 3px solid #0B1033">10</div>
 </div>
 <div>
 <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(242,101,34,.14); color: #FF9A62; font-size: 12px; font-weight: 500; padding: 5px 14px 5px 12px; border-radius: 99px; border: 1px solid rgba(242,101,34,.35)"><span style="width: 7px; height: 7px; border-radius: 50%; background: #F26522; box-shadow: 0 0 0 4px rgba(242,101,34,.25)"></span>في التأهيل · المرحلة 3 من 5</div>
-<h1 style="margin: 10px 0 0; font-size: 54px; font-weight: 600; line-height: 1.05; letter-spacing: -1px; color: #fff">[اسم اللاعب]</h1>
+<h1 class="m-h1" style="margin: 10px 0 0; font-size: 54px; font-weight: 600; line-height: 1.05; letter-spacing: -1px; color: #fff">[اسم اللاعب]</h1>
 <div style="color: #A9AFD6; margin-top: 8px; font-size: 15px">لاعب وسط هجومي · فريق الرجال — كرة القدم · القدم اليمنى</div>
 </div>
 </div>
 
-<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin-top: 34px; border: 1px solid rgba(255,255,255,.08); border-radius: 20px; background: rgba(255,255,255,.025); overflow: hidden">
+<div class="m-stats" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin-top: 34px; border: 1px solid rgba(255,255,255,.08); border-radius: 20px; background: rgba(255,255,255,.025); overflow: hidden">
 <div style="padding: 16px 20px; border-left: 1px solid rgba(255,255,255,.08)"><div style="font-size: 11px; color: #8E95C4">العمر</div><div style="font-size: 26px; font-weight: 500; color: #fff; line-height: 1.3">24<span style="font-size: 13px; color: #8E95C4; margin-right: 4px">سنة</span></div></div>
 <div style="padding: 16px 20px; border-left: 1px solid rgba(255,255,255,.08)"><div style="font-size: 11px; color: #8E95C4">الطول</div><div style="font-size: 26px; font-weight: 500; color: #fff; line-height: 1.3">178<span style="font-size: 13px; color: #8E95C4; margin-right: 4px">سم</span></div></div>
 <div style="padding: 16px 20px; border-left: 1px solid rgba(255,255,255,.08)"><div style="font-size: 11px; color: #8E95C4">الوزن</div><div style="font-size: 26px; font-weight: 500; color: #fff; line-height: 1.3">72<span style="font-size: 13px; color: #8E95C4; margin-right: 4px">كغ</span></div></div>
@@ -72,7 +112,7 @@ button{font-family:inherit;cursor:pointer}
 </div>
 </div>
 
-<div style="flex: 1 1 300px; display: flex; gap: 22px; align-items: center; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 24px; padding: 22px 24px">
+<div class="m-ring" style="flex: 1 1 300px; display: flex; gap: 22px; align-items: center; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 24px; padding: 22px 24px">
 <svg width="132" height="132" viewBox="0 0 132 132" role="img" aria-label="الجاهزية 62 بالمئة">
 <circle cx="66" cy="66" r="54" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="10"></circle>
 <circle cx="66" cy="66" r="54" fill="none" stroke="#F26522" stroke-width="10" stroke-linecap="round" stroke-dasharray="{{ringDash}}" transform="rotate(-90 66 66)"></circle>
@@ -93,23 +133,23 @@ button{font-family:inherit;cursor:pointer}
 </section>
 
 <div style="position: sticky; top: 0; z-index: 5; background: rgba(11,16,51,.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,.07)">
-<div role="tablist" style="max-width: 1320px; margin: 0 auto; padding: 0 40px; display: flex; gap: 6px; overflow-x: auto">
+<div role="tablist" class="m-tabs" style="max-width: 1320px; margin: 0 auto; padding: 0 40px; display: flex; gap: 6px; overflow-x: auto">
 <sc-for list="{{tabs}}" as="t" hint-placeholder-count="5">
 <button role="tab" onClick="{{t.pick}}" style="{{t.style}}">{{t.label}}</button>
 </sc-for>
 </div>
 </div>
 
-<main style="background: #F4F1EC; color: #161A3A; padding: 36px 40px 64px; min-height: 600px">
+<main class="m-main" style="background: #F4F1EC; color: #161A3A; padding: 36px 40px 64px; min-height: 600px">
 <div style="max-width: 1320px; margin: 0 auto">
 
 <sc-if value="{{isOverview}}" hint-placeholder-val="{{true}}">
-<div class="kr" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 20px">
+<div class="kr m-g12" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 20px">
 
-<section class="kc" style="grid-column: span 7; background: #fff; border-radius: 28px; padding: 28px 30px; box-shadow: 0 1px 0 rgba(20,28,79,.04), 0 30px 60px -40px rgba(20,28,79,.35); display: flex; gap: 26px; flex-wrap: wrap">
+<section class="kc m-card" style="grid-column: span 7; background: #fff; border-radius: 28px; padding: 28px 30px; box-shadow: 0 1px 0 rgba(20,28,79,.04), 0 30px 60px -40px rgba(20,28,79,.35); display: flex; gap: 26px; flex-wrap: wrap">
 <div style="flex: 999 1 300px; min-width: 0">
 <div style="font-size: 12px; color: #F26522; font-weight: 500; letter-spacing: .3px">الإصابة الحالية · منذ 22 تشرين الأول</div>
-<h2 style="margin: 6px 0 0; font-size: 30px; font-weight: 600; letter-spacing: -.5px; line-height: 1.25; color: #0B1033">تمزّق في عضلة خلفية الفخذ اليمنى</h2>
+<h2 class="m-h2" style="margin: 6px 0 0; font-size: 30px; font-weight: 600; letter-spacing: -.5px; line-height: 1.25; color: #0B1033">تمزّق في عضلة خلفية الفخذ اليمنى</h2>
 <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px">
 <span style="background: #0B1033; color: #fff; padding: 5px 14px; border-radius: 99px; font-size: 12px">الدرجة 2</span>
 <span style="background: #F4F1EC; padding: 5px 14px; border-radius: 99px; font-size: 12px">مباراة · الدقيقة 67</span>
@@ -129,7 +169,7 @@ button{font-family:inherit;cursor:pointer}
 </sc-for>
 </div>
 </div>
-<div style="flex: 1 1 200px; background: #0B1033; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; align-items: center; position: relative; overflow: hidden">
+<div class="m-body" style="flex: 1 1 200px; background: #0B1033; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; align-items: center; position: relative; overflow: hidden">
 <div style="font-size: 11px; color: #8E95C4; align-self: flex-start">موقع الإصابة · منظر خلفي</div>
 <svg viewBox="0 0 200 400" width="180" height="360" role="img" aria-label="مخطط الجسم مع موضع الإصابة في خلف الفخذ الأيمن">
 <g fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.22)" stroke-width="1.2">
@@ -150,7 +190,7 @@ button{font-family:inherit;cursor:pointer}
 <div aria-hidden="true" style="position: absolute; inset: 0; background: repeating-linear-gradient(180deg, rgba(255,255,255,.09) 0 14px, transparent 14px 26px); clip-path: polygon(55% 0, 100% 0, 100% 100%, 25% 100%)"></div>
 <div style="position: relative">
 <div style="font-size: 12px; opacity: .85">الموعد القادم</div>
-<div style="font-size: 64px; font-weight: 600; line-height: 1; letter-spacing: -2px; margin-top: 10px">10:30</div>
+<div class="m-time" style="font-size: 64px; font-weight: 600; line-height: 1; letter-spacing: -2px; margin-top: 10px">10:30</div>
 <div style="font-size: 18px; font-weight: 500; margin-top: 6px">الثلاثاء · 10 تشرين الثاني</div>
 <div style="height: 1px; background: rgba(255,255,255,.3); margin: 20px 0"></div>
 <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; font-size: 13px">
@@ -248,7 +288,7 @@ button{font-family:inherit;cursor:pointer}
 </sc-if>
 
 <sc-if value="{{isHistory}}" hint-placeholder-val="{{false}}">
-<div class="kr" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<div class="kr m-g3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
 <section style="background: #fff; border-radius: 28px; padding: 26px; box-shadow: 0 30px 60px -40px rgba(20,28,79,.35)"><div style="font-size: 12px; color: #F26522">01</div><h3 style="margin: 4px 0 14px; font-size: 18px; font-weight: 600; color: #0B1033">التاريخ المرضي</h3><div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px"><div>الأمراض المزمنة<div style="font-weight: 500">لا يوجد</div></div><div>العمليات السابقة<div style="font-weight: 500">تنظير غضروف الركبة اليسرى · 2022</div></div><div>الأدوية الحالية<div style="font-weight: 500">لا يوجد</div></div></div></section>
 <section style="background: #fff; border-radius: 28px; padding: 26px; box-shadow: 0 30px 60px -40px rgba(20,28,79,.35)"><div style="font-size: 12px; color: #F26522">02</div><h3 style="margin: 4px 0 14px; font-size: 18px; font-weight: 600; color: #0B1033">الفحص قبل الموسم</h3><div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px"><div style="display: flex; justify-content: space-between"><span>تخطيط القلب</span><span style="color: #1E7A47; font-weight: 500">سليم</span></div><div style="display: flex; justify-content: space-between"><span>التحاليل الدموية</span><span style="color: #1E7A47; font-weight: 500">سليمة</span></div><div style="display: flex; justify-content: space-between"><span>اختبار الحركة الوظيفية</span><span style="color: #D9530F; font-weight: 500">مستحق</span></div></div></section>
 <section style="background: #0B1033; color: #fff; border-radius: 28px; padding: 26px"><div style="font-size: 12px; color: #FF8A4C">03</div><h3 style="margin: 4px 0 14px; font-size: 18px; font-weight: 600">الطوارئ</h3><div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px"><div><span style="color: #8E95C4">هاتف اللاعب</span><div>[الرقم]</div></div><div><span style="color: #8E95C4">جهة اتصال للطوارئ</span><div>[الاسم والرقم]</div></div><div style="color: #FFB3B5">حساسية: البنسلين</div></div></section>
@@ -256,7 +296,7 @@ button{font-family:inherit;cursor:pointer}
 </sc-if>
 
 <sc-if value="{{isFiles}}" hint-placeholder-val="{{false}}">
-<section class="kr" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<section class="kr m-g3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
 <sc-for list="{{files}}" as="f" hint-placeholder-count="3">
 <div style="background: #fff; border-radius: 28px; overflow: hidden; box-shadow: 0 30px 60px -40px rgba(20,28,79,.35)">
 <div style="height: 150px; background: #0B1033; display: flex; align-items: center; justify-content: center; position: relative"><div style="position: absolute; inset: 0; background: repeating-linear-gradient(180deg, rgba(242,101,34,.18) 0 10px, transparent 10px 20px); clip-path: polygon(60% 0, 100% 0, 100% 100%, 30% 100%)"></div><span style="position: relative; color: #fff; font-size: 13px; border: 1px solid rgba(255,255,255,.25); padding: 6px 14px; border-radius: 99px">{{f.kind}}</span></div>
@@ -268,6 +308,13 @@ button{font-family:inherit;cursor:pointer}
 
 </div>
 </main>
+<nav class="m-bnav" aria-label="التنقل الرئيسي" style="display: none">
+<a href="#" style="color: #8E95C4; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10px; flex: 1; padding: 8px 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="2"></rect><rect x="14" y="3" width="7" height="5" rx="2"></rect><rect x="14" y="12" width="7" height="9" rx="2"></rect><rect x="3" y="16" width="7" height="5" rx="2"></rect></svg>القسم</a>
+<a href="#" style="color: #FF8A4C; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10px; flex: 1; padding: 8px 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"></path><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.6.8 2.6 2.5 3 5.2"></path></svg>اللاعبون</a>
+<a href="#" style="text-decoration: none; display: flex; align-items: center; justify-content: center; flex: 1"><span style="width: 52px; height: 52px; margin-top: -26px; border-radius: 18px; background: #F26522; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 12px 24px -8px rgba(242,101,34,.9); border: 4px solid #0B1033" aria-label="جلسة جديدة">+</span></a>
+<a href="#" style="color: #8E95C4; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10px; flex: 1; padding: 8px 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>المواعيد</a>
+<a href="#" style="color: #8E95C4; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10px; flex: 1; padding: 8px 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"></path></svg>التقارير</a>
+</nav>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
